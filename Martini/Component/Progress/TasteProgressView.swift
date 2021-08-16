@@ -20,14 +20,19 @@ class TasteProgressView: UIView {
         self.addSubview(tasteLabel)
         self.addSubview(tasteProgress)
         
-        setProgressValue(0.4)  // value 셋팅
+        
+        // 현재 value 셋팅
+        setProgressValue(0.4)
         
 
+        // title
         tasteLabel.text = "Sweet"
         
         
         
         
+        
+        //layout
         tasteLabel.translatesAutoresizingMaskIntoConstraints = false
         tasteLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         tasteLabel.centerYAnchor.constraint(equalTo: tasteProgress.centerYAnchor).isActive = true
@@ -42,20 +47,15 @@ class TasteProgressView: UIView {
         // 코너 둥글게
         tasteProgress.clipsToBounds = true
         tasteProgress.layer.cornerRadius = 8
-
-        
-//        self.translatesAutoresizingMaskIntoConstraints = false
-//        self.heightAnchor.constraint(equalToConstant: 20).isActive = true
-//
-//
-        
-        
+ 
         
     }
     
     
     
     
+    // progressbar value 셋팅
+    // 0.6을 넘길때 빨간색으로 변경 
     func setProgressValue(_ value: Float){
         
         tasteProgress.setProgress(value, animated: false)

@@ -33,16 +33,17 @@ class BannerButton: UIView {
         configureBannerImageView()
         
 
+
         
-        self.backgroundColor = UIColor.systemGray2
-        self.layer.cornerRadius = 15
-        
-        
-        // 이미지, text
+         
+        // 이미지, text 설정
         bannerImageView.image = UIImage(named: "cocktaildrink_coctel_4688.png")
         bannerLabel.text = "Orange"
         
         
+        
+        self.backgroundColor = UIColor.systemGray2
+        self.layer.cornerRadius = 15
         
         bannerButton.addTarget(self, action: #selector(bannerSelected), for: .touchUpInside)
       
@@ -106,23 +107,6 @@ class BannerButton: UIView {
             }
         }
             
-        
-        
-    
-    
-    
-    // button내 이미지와 text를 수직으로 하는 메소드 --> 잘 모르겠음,,
-//    func alignTextUnderImage(spacing: CGFloat = 6.0)
-//       {
-//           if let image = self.imageView?.image
-//           {
-//               let imageSize: CGSize = image.size
-//               self.titleEdgeInsets = UIEdgeInsets(top: spacing, left: -imageSize.width, bottom: -(imageSize.height), right: 0.0)
-//               let labelString = NSString(string: self.titleLabel!.text!)
-//            let titleSize = labelString.size(withAttributes: [NSAttributedString.Key.font: self.titleLabel!.font!])
-//               self.imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + spacing), left: 0.0, bottom: 0.0, right: -titleSize.width)
-//           }
-//
 
    
 
